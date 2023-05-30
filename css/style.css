@@ -146,9 +146,9 @@ nav h1 span{
     }
 }
 @media (max-width:700px){
-        main {
+   main {
         background-image:linear-gradient(rgba(15, 15, 15, 0.7),rgba(15,15,15,0.7)),url("../images/laptop6.jpg");
-        background-position:cover;
+        background-position:contain;
         background-attachment: fixed;
     }
     nav{
