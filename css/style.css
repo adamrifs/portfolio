@@ -323,7 +323,7 @@ section{
     }
     .content span{
         position:absolute;
-        top:50%;
+        top:20%;
         left:50%;
         width:200px;
         height:2px;
@@ -333,9 +333,9 @@ section{
     }
     .banner .content p{
         font-size:14px;
-        width: 240px;
+        width: 300px;
         margin-top:40px;
-        margin-left: 12px;;
+        margin-left: -2px;;
     }
 }
 /*service section starts here*/
@@ -407,7 +407,7 @@ section{
     .service{
         width:100%;
         position:absolute;
-        top:15%;
+        top:21%;
         left:0;
     }
     .servicehead h1{
