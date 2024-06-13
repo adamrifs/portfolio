@@ -1,0 +1,47 @@
+import fornax from './assets/fornax.jpg'
+import university from './assets/university.jpg'
+import web4 from './assets/web4.gif'
+import web1 from './assets/web1.gif'
+import web2 from './assets/web2.gif'
+
+export const projects = [
+    {
+        id:'1',
+        image: fornax,
+        link:'https://fornaxgamestore.vercel.app/',
+        name:'Fornax gaming store',
+        description:'Fornax Gaming Store is an advanced gaming store developed using <b>React.js</b>.It features a secure user registration and login system, comprehensive product listings with filters and search functionality,and detailed product information. Users can manage their profiles, maintain a wishlist, and utilize a shopping cart for a seamless shopping experience.Additionally, an admin dashboard facilitates efficient store management.This platform offers a complete and user-friendly solution for gaming enthusiasts.'
+    },
+    {
+        id:'2',
+        image: university,
+        link:'https://adamrifs.github.io/university',
+        name:'University web page',
+        description:'Developed using <b>Python Django</b>, this University web page offers a secure login system and a range of features.Users can select and enroll in different courses, view detailed course information, and manage their profiles effortlessly.The platform ensures a user-friendly and secure environment,streamlining academic activities for students and faculty.'
+    }
+]
+
+export const aboutdet = [
+    {
+        name:'About me.',
+        description:'I\'m a MERN stack developer, distinguished by my graduation in BCA,crafting sophisticated web applications with MongoDB, Express.js, React.js, and Node.js. With a fervent passion for innovation,I transform challenges into sleek,user-centric experiences. Each project is a testament to my commitment to quality and cutting-edge development.'
+    }
+]
+
+export const servicedet = [
+    {
+        id:'1',
+        image: web4 ,
+        name:'Web Development'
+    },
+    {
+        id:'2',
+        image: web1,
+        name:'Web Design'
+    },
+    {
+        id:'3',
+        image:web2,
+        name:'UI/UX'
+    }
+]

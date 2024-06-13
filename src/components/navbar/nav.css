@@ -1,0 +1,166 @@
+/* navigation bar*/
+.nav{
+    width:100%;
+    height:61px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    z-index:500;
+    transition:0.8s ease-in-out;
+    
+}
+.textbox h1{
+    cursor: pointer;
+}
+.nav-links ul{
+    position:absolute;
+    top:0;
+    right:0;
+    height:60px;
+}
+.nav-links ul li{
+    display:inline-block;
+    margin:20px 20px;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.nav-links ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.nav-links ul li a::after{
+    content:'';
+    background-color: red;
+    height:2px;
+    width:0;
+    display:block;
+    margin:auto;
+    transition:0.5s ease-in-out;
+}
+.nav-links ul li a:hover::after{
+    width:100%;
+}
+.nav-links i{
+    display:none;
+    width: 0;
+}
+#list{
+    display: none;
+}
+
+nav h1{
+    color:white;
+    margin:20px 30px;
+    font-size:30px;
+    font-weight:400;
+    letter-spacing:2px;
+}
+nav h1 span{
+    color:red;
+    font-size:35px;
+    font-weight:500;
+}
+.navicon{
+    display: none;
+}
+.closeicon{
+    display: none;
+}
+
+@media (max-width:700px) {
+    nav{
+        display:flex;
+        flex-direction: column;
+        align-items:right;
+        position: relative;
+    }
+    .nav-links{
+        width:250px;
+        height:390px;
+        background-color:rgba(0, 0, 0, 0.837);
+        position:fixed;
+        top:-500px;
+        right:0px;
+        font-family: 'poppins';
+        z-index:2;
+        transition:0.5s ease-in-out;
+
+    }
+    .nav-links ul li a{
+        font-size: 16px;
+        font-weight: 300;
+
+    }
+    .nav-links ul li {
+        /* padding:5px 20px; */
+        margin:0;
+        padding: 20px ;
+        width: 100%;
+    }
+    .nav-links ul li a:hover::after{
+        width: 0;
+    }
+    .nav-links li:active{
+        background-color: rgba(10, 10, 10, 0.911);
+    }
+    /* #list{
+        display: block;
+        color:white;
+        font-size: 30px;
+        position:absolute;
+        top:0;
+        right:0;
+        margin:15px 20px;
+    
+    } */
+    .nav-links .closeicon{
+        color: white;
+        display: block;
+        width:100%;
+        background-color: rgb(0, 0, 0);
+        font-size: 35px;
+        padding:30px;
+        position: relative;
+    }
+    .closeicon span{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top:50%;
+        right:5px;
+        transform: translateY(-50%);
+    }
+    .nav-links .closeicon span>svg{
+        position: absolute;
+        top:50%;
+        right:15px;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+    }
+  
+    .navicon{
+        display: block;
+        color: rgba(255, 255, 255, 0.852);
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+    .navicon>svg{
+        width: 40px;
+        height: 40px;
+    }
+    .open{
+        top:0;
+    }
+    .close{
+        top:-500px;
+    }
+}

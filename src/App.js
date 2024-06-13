@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/home';
+import Nav from './components/navbar/nav';
+import Footer from './components/footer/footer';
+import { mycontext } from './components/context';
+import { useState } from 'react';
+import { aboutdet, projects, servicedet } from './components/datafile';
 
 function App() {
+
+  const [project,setproject] = useState(projects)
+  const [about,setabout] = useState(aboutdet)
+  const [services,setservices] = useState(servicedet)
+
+  const values={
+    project,setproject,about,setabout,services,setservices
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <mycontext.Provider value={values}>
+        <Nav />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/nav' element={<Nav />} />
+          <Route path='/footer' element={<Footer />} />
+        </Routes>
+        <Footer />
+        </mycontext.Provider>
+      </BrowserRouter>
     </div>
   );
 }
