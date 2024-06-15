@@ -217,7 +217,7 @@ function Home() {
             <div className="second-cont">
                 {
                     about.map(dt =>
-                        <div className="about-section">
+                        <div className="about-section" id='aboutsec'>
                             <div ref={headref} className={`ab-heads ${visible ? 'swipe' : ''}`}>
                                 <h1>{dt.name}</h1>
                             </div>
@@ -232,7 +232,7 @@ function Home() {
             {/* ============== third container starts here============= */}
 
             <div className="third-cont">
-                <div className="project-cont">
+                <div className="project-cont" id='projects'>
                     <div ref={projheadref} className={`pr-heads ${prhvisible ? 'headslide' : ''}`}>
                         <h2>Projects</h2>
                     </div>
@@ -262,7 +262,7 @@ function Home() {
             {/*============= fourth container starts here============ */}
 
             <div className="fourth-cont">
-                <div className="service-cont">
+                <div className="service-cont" id='services'>
                     <div ref={servhead} className={`service-head ${servisible ? 'serve-h-fade' : ''}`} >
                         <h1>Services</h1>
                     </div>
@@ -288,7 +288,7 @@ function Home() {
 
             <div className="fifth-cont">
                 <div className="contact-box">
-                    <div className="contact-head">
+                    <div className="contact-head" id='contact'>
                         <h2>Contact Me</h2>
                     </div>
                 </div>
