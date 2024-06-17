@@ -22,7 +22,7 @@ export const projects = [
     {
         id:'3',
         image: LuxeRooms,
-        link:'luxe-rooms.vercel.app',
+        link:'https://luxe-rooms.vercel.app',
         name:'LuxeRooms',
         description:'LuxeRooms is an elegant interior furniture website template built with React, offering a curated collection of premium furniture to transform your living spaces.'
     }
