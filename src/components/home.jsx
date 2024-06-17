@@ -70,7 +70,7 @@ function Home() {
             const headtop = projheadref.current.getBoundingClientRect().top;
             const windowheight = window.innerHeight
             if (projheadref) {
-                if (headtop < windowheight / 2) {
+                if (headtop < windowheight) {
                     setprhvisible(true)
                 } else {
                     setprhvisible(false)
@@ -93,10 +93,9 @@ function Home() {
             const projtop = projectref.current.getBoundingClientRect().top
             const windowheight = window.innerHeight
             if (projectref) {
-                if (projtop < windowheight / 2) {
+                if (projtop < windowheight ) {
                     setprojvisible(true)
-                } else {
-                    setprojvisible(false)
+                    window.removeEventListener('scroll',projslide);
                 }
             }
         }

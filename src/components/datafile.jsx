@@ -3,7 +3,7 @@ import university from './assets/university.jpg'
 import web4 from './assets/web4.gif'
 import web1 from './assets/web1.gif'
 import web2 from './assets/web2.gif'
-
+import LuxeRooms from './assets/LuxeRooms.png'
 export const projects = [
     {
         id:'1',
@@ -18,6 +18,13 @@ export const projects = [
         link:'https://adamrifs.github.io/university',
         name:'University web page',
         description:'Developed using <b>Python Django</b>, this University web page offers a secure login system and a range of features.Users can select and enroll in different courses, view detailed course information, and manage their profiles effortlessly.The platform ensures a user-friendly and secure environment,streamlining academic activities for students and faculty.'
+    },
+    {
+        id:'3',
+        image: LuxeRooms,
+        link:'luxe-rooms.vercel.app',
+        name:'LuxeRooms',
+        description:'LuxeRooms is an elegant interior furniture website template built with React, offering a curated collection of premium furniture to transform your living spaces.'
     }
 ]
 
