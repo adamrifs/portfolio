@@ -4,6 +4,7 @@ import web4 from './assets/web4.gif'
 import web1 from './assets/web1.gif'
 import web2 from './assets/web2.gif'
 import LuxeRooms from './assets/LuxeRooms.png'
+
 export const projects = [
     {
         id:'1',
@@ -24,7 +25,7 @@ export const projects = [
         image: LuxeRooms,
         link:'https://luxe-rooms.vercel.app',
         name:'LuxeRooms',
-        description:'LuxeRooms is an elegant interior furniture website template built with React, offering a curated collection of premium furniture to transform your living spaces.'
+        description:'LuxeRooms is an elegant interior furniture website template built with <b>React</b> , offering a curated collection of premium furniture to transform your living spaces.'
     }
 ]
 
