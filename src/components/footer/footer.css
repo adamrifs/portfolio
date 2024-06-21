@@ -25,7 +25,7 @@
 }
 .footer h1 span{
     font-size: 48px;
-    color:red;
+    color:#3d66a6;
 }
 .ft-left{
     padding-left:20px;
@@ -53,7 +53,7 @@
     cursor: pointer;
 }
 .email-head p:hover{
-    color: red;
+    color: #0dd1f1;
 }
 .footer .icons{
     text-align: center;
@@ -65,7 +65,7 @@
     font-size:18px;
 }
 .footer .icons a:hover{
-    color:red;
+    color:#0dd1f1;
 }
 .footer h2{
     text-align: center;

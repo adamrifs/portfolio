@@ -6,9 +6,10 @@ import web1 from './assets/web1.gif'
 import web2 from './assets/web2.gif'
 import web3 from './assets/web3.gif'
 import web4 from './assets/web4.gif'
+import cv from './assets/cv.pdf'
 import { GiClick } from "react-icons/gi";
 import { TiDownload } from "react-icons/ti";
-import cv from './assets/cv.pdf'
+import { BsArrowRightShort } from "react-icons/bs";
 import { IoIosSend } from "react-icons/io";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
@@ -196,19 +197,38 @@ function Home() {
     return (
         <div className='home-container'>
             <div className='main'>
-                
+
                 <div class="gr1"></div>
                 <div class="gr2"></div>
+                <div class="grf"></div>
                 <div class="gr3"></div>
                 <div class="gr4"></div>
+                <div class="gr4f"></div>
                 <div class="gr5"></div>
+                <div class="gr5f"></div>
                 <div class="gr6"></div>
                 <div class="gr7"></div>
 
                 <div class="container">
                     <div ref={mainref} class="heading fade-in">
-                        <h1 class="first">Hi,<span></span></h1><br />
-                        <h1>I'm ADAM <span></span></h1>
+                        {/* <h1 class="first">Hi,<span></span></h1><br />
+                        <h1>I'm Adam <span></span></h1> */}
+
+                        <h1>
+                            <span class="word1">Hi</span>
+                            <span class="word2">I'm</span>
+                            <span class="word3">Adam</span>
+                            {/* <span class="word4">Future</span> */}
+                        </h1>
+                        <div class="box">
+                            <h1>
+                                <span class="box1">Hi,</span>
+                                <span class="box2">I'm</span>
+                                <span class="box3">Adam</span>
+                                {/* <span class="box4">Future</span> */}
+                            </h1>
+                        </div>
+
                     </div>
                 </div>
                 <div className="cv-dw-box">
@@ -217,6 +237,10 @@ function Home() {
                             <span></span><TiDownload className={buttonanim ? 'icon download' : 'icon'} /> Download CV
                         </button>
                     </a>
+
+                    <div className="gt-start">
+                        <button className='gtstrt'>Get Started  <BsArrowRightShort /></button>
+                    </div>
                 </div>
             </div>
 

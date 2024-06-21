@@ -50,6 +50,19 @@ body::-webkit-scrollbar {
 }
 
 .gr2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #d0d6f3;
+    background-color: #d0d6f3;
+    position: absolute;
+    bottom: -120px;
+    left: 300px;
+    z-index: 5;
+    animation: gra2 14s ease infinite;
+}
+
+.grf {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -82,9 +95,34 @@ body::-webkit-scrollbar {
     position: absolute;
     bottom: 0px;
     right: 300px;
+    animation: gra4 15s ease infinite;
+}
+
+.gr4f {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #0dd1f1;
+    background-color: #0dd1f1;
+    position: absolute;
+    bottom: 0px;
+    right: 300px;
 }
 
 .gr5 {
+    width: 100px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #879bfd;
+    background-color: #879bfd;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    z-index: 3;
+    animation: gra5 18s ease infinite;
+}
+
+.gr5f {
     width: 50px;
     height: 350px;
     border-radius: 50%;
@@ -118,21 +156,116 @@ body::-webkit-scrollbar {
     right: 50px;
 }
 
+@keyframes gra2 {
+    0% {
+        top: 50%;
+        left: 0px;
+    }
 
+    25% {
+        top: 10%;
+        left: 20%;
+    }
+
+    50% {
+        top: 70%;
+        left: 50%;
+    }
+
+    75% {
+        top: 30%;
+        left: 70%;
+    }
+
+    100% {
+        top: 50%;
+        left: 0px;
+    }
+}
+
+/* ================= gr4 animation=========================== */
+@keyframes gra4 {
+    0% {
+        bottom: 0px;
+        right: 300px;
+    }
+
+    25% {
+        bottom: 100%;
+        right: 20%;
+    }
+
+    50% {
+        bottom: 70%;
+        right: 50%;
+    }
+
+    75% {
+        bottom: 90%;
+        right: 80%;
+    }
+
+    100% {
+        bottom: 0px;
+        right: 300px;
+    }
+}
+
+/* =================== gra5 ================ */
+@keyframes gra5 {
+    0% {
+        top: 50%;
+        right: 0px;
+    }
+
+    25% {
+        top: 70%;
+        right: 30%;
+    }
+
+    50% {
+        top: 60%;
+        right: 50%;
+    }
+
+    75% {
+        top: 0%;
+        right: 0%;
+    }
+
+    100% {
+        top: 50%;
+        right: 0px;
+    }
+}
 
 /* ========================================================================== */
 .cv-dw-box {
     position: absolute;
-    top: 62%;
+    top: 58%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 20;
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    animation: landingbtn 1.2s 3.2s ease forwards;
+}
+
+@keyframes landingbtn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .cv-dw-box button {
     padding: 10px 30px;
     background-color: rgb(0, 0, 0);
-    border: 1px solid transparent;
+    border: 2px solid black;
     color: white;
     font-family: 'poppins';
     font-size: 17px;
@@ -146,22 +279,21 @@ body::-webkit-scrollbar {
     -webkit-tap-highlight-color: transparent;
 }
 
-.cv-dw-box button::before {
+/* .cv-dw-box button::before {
     content: '';
     width: 0;
     height: 100%;
     background: linear-gradient(to left, #879bfd, #3d66a6);
-    /* background: linear-gradient(to right, rgba(108, 108, 108, 0.6), rgba(0, 0, 0, 0.119)); */
     position: absolute;
     top: 0;
     left: 0;
     transition: 0.5s ease;
     z-index: -1;
-}
+} */
 
 .cv-dw-box button>.icon {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
     margin-right: 5px;
     z-index: 5;
@@ -169,12 +301,38 @@ body::-webkit-scrollbar {
     transform: translateY(0);
 }
 
-.cv-dw-box button:hover::before {
-    width: 100%;
+.cv-dw-box button:hover {
+    background-color: transparent;
+    color: black;
+    font-weight: 600;
 }
 
 .icon.download {
     animation: movedown 1.5s ease;
+}
+
+.cv-dw-box .gt-start .gtstrt {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    font-weight: 500;
+    vertical-align: middle;
+    height: 48px;
+    width: 190px;
+    padding: 0;
+}
+
+.cv-dw-box .gtstrt>svg {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.gt-start .gtstrt:hover {
+    background-color: black;
+    color: white;
 }
 
 @keyframes movedown {
@@ -205,20 +363,165 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Poppins";
     z-index: 100;
 }
 
-.heading h1 {
+.container h1 {
+    font-size: 120px;
+    font-weight: 700;
+}
+
+.box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+
+}
+
+.box h1 {
+    font-size: 120px;
+    font-weight: 700;
+    margin-top: 0;
+    opacity: 0;
+    animation: second 1.5s 2.5s ease forwards;
+}
+
+.box1 {
+    margin-right: 50px;
+    font-size: 80px;
+}
+
+.box2 {
+    margin-right: 50px;
+}
+
+.box3 {
+    margin-right: 50px;
+}
+
+.word1 {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: word1 0.7s 0.5s linear forwards;
+}
+
+.word2 {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: word2 0.5s 1.3s linear forwards;
+}
+
+.word3 {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: word3 0.7s 1.8s linear forwards;
+}
+
+/* .word4{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: word4 0.3s 2s linear forwards;
+} */
+@keyframes word1 {
+    0% {
+        visibility: hidden;
+        /* transform: translateX(-50%); */
+    }
+
+    50% {
+        visibility: visible;
+        /* transform: translateX(-50%); */
+    }
+
+    100% {
+        visibility: hidden;
+
+    }
+}
+
+@keyframes word2 {
+    0% {
+        visibility: hidden;
+        /* transform: translateX(-50%); */
+    }
+
+    50% {
+        visibility: visible;
+        /* transform: translateX(-50%); */
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes word3 {
+    0% {
+        visibility: hidden;
+        /* transform: translateX(-50%); */
+    }
+
+    50% {
+        visibility: visible;
+        /* transform: translateX(-50%); */
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+/* @keyframes word4 {
+    0%{
+        visibility: hidden;
+        transform: translateX(-50%);
+    }   
+    50%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+
+    100%{
+        visibility: visible;
+        opacity:0;
+        transform: translateX(-150%);
+    }
+} */
+/* ======== second animation=========== */
+@keyframes second {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translateX(-10%);
+    }
+}
+
+/* .heading h1 {
     position: relative;
     color: black;
-    font-size: 130px;
-    font-weight: 600;
+    font-size: 120px;
+    font-weight: 700;
     display: inline-block;
-    /* animation: overlay .5s 1s ease forwards; */
+    animation: overlay .5s 1s ease forwards;
 }
 
 .heading {
@@ -231,7 +534,7 @@ body::-webkit-scrollbar {
 .heading .first {
     font-size: 65px;
     font-weight: 500;
-}
+} */
 
 /* .heading .first {
     animation-delay: 1s;
@@ -990,14 +1293,14 @@ body::-webkit-scrollbar {
     /* background-color:  #0f0e0e; */
     background-color: white;
     /* color: #7a0402; */
-    color: #D21312;
+    color: #0dd1f1;
     padding: 0 5px;
     font-size: 14px;
 }
 
 .input-fields input:focus,
 .input-fields input:valid {
-    border: 2px solid #D21312;
+    border: 2px solid #0dd1f1;
     /* border: 2px solid #7a0402; */
 }
 
@@ -1032,7 +1335,7 @@ body::-webkit-scrollbar {
     left: 10px;
     /* background-color: #0f0e0e ; */
     background-color: white;
-    color: #D21312;
+    color: #0dd1f1;
     /* color: #7a0402; */
     padding: 0 5px;
     font-size: 14px;
@@ -1041,7 +1344,7 @@ body::-webkit-scrollbar {
 .input-fields .textarea:focus,
 .input-fields .textarea:valid {
     /* border: 2px solid #7a0402; */
-    border: 2px solid #D21312;
+    border: 2px solid #0dd1f1;
 
 }
 
@@ -1085,7 +1388,8 @@ body::-webkit-scrollbar {
     width: 0;
     height: 100%;
     /* background-color: #D21312; */
-    background: linear-gradient(to left, #bf0603, #7a0402);
+    background: linear-gradient(to left, #879bfd, #3d66a6);
+    /* background: linear-gradient(to left, #bf0603, #7a0402); */
     /* background: linear-gradient(to right, rgba(108, 108, 108, 0.6), rgba(0, 0, 0, 0.119)); */
     position: absolute;
     top: 0;
