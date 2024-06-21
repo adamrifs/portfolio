@@ -25,29 +25,119 @@ body::-webkit-scrollbar {
 .main {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.7)), url('../components/assets/laptop6.jpg');
+    overflow: hidden;
+    /* background-image: linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.7)), url('../components/assets/laptop6.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; */
+    background: linear-gradient(180deg, rgb(255, 255, 255) 50%, rgba(100, 208, 203, 1) 100%);
     background-attachment: fixed;
     position: relative;
 
 }
 
+/* ================== gradients starts here ====================== */
+.gr1 {
+    width: 150px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #69e9d2;
+    background-color: #69e9d2;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    z-index: 4;
+}
+
+.gr2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #0a75c5;
+    background-color: #0a75c5;
+    position: absolute;
+    bottom: -120px;
+    left: 300px;
+    z-index: 5;
+}
+
+.gr3 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #3d66a6;
+    background-color: #3d66a6;
+    position: absolute;
+    bottom: -100px;
+    left: 700px;
+    z-index: 1;
+}
+
+.gr4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #0dd1f1;
+    background-color: #0dd1f1;
+    position: absolute;
+    bottom: 0px;
+    right: 300px;
+}
+
+.gr5 {
+    width: 50px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #879bfd;
+    background-color: #879bfd;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    z-index: 3;
+}
+
+.gr6 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #d0d6f3;
+    background-color: #d0d6f3;
+    position: absolute;
+    top: 60%;
+    right: 18%;
+}
+
+.gr7 {
+    width: 300px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #3d66a6;
+    background-color: #3d66a6;
+    position: absolute;
+    bottom: -150px;
+    right: 50px;
+}
+
+
+
+/* ========================================================================== */
 .cv-dw-box {
     position: absolute;
-    top: 140px;
-    right: 90px;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
 }
 
 .cv-dw-box button {
     padding: 10px 30px;
-    background-color: rgba(0, 0, 0, 0.319);
-    border: 1px solid white;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid transparent;
     color: white;
     font-family: 'poppins';
     font-size: 17px;
     text-align: center;
-    border-radius: 0px;
+    border-radius: 50px;
     cursor: pointer;
     transition: 0.5s ease;
     z-index: 5;
@@ -60,7 +150,7 @@ body::-webkit-scrollbar {
     content: '';
     width: 0;
     height: 100%;
-    background: linear-gradient(to left, #bf060338, #7a0402);
+    background: linear-gradient(to left, #879bfd, #3d66a6);
     /* background: linear-gradient(to right, rgba(108, 108, 108, 0.6), rgba(0, 0, 0, 0.119)); */
     position: absolute;
     top: 0;
@@ -115,26 +205,27 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Poppins"
+    font-family: "Poppins";
+    z-index: 100;
 }
 
 .heading h1 {
     position: relative;
-    color: transparent;
+    color: black;
     font-size: 130px;
     font-weight: 600;
     display: inline-block;
-    animation: overlay .5s 1s ease forwards;
+    /* animation: overlay .5s 1s ease forwards; */
 }
 
 .heading {
     text-align: left;
     transition: transform 0.8s ease-in-out,
         opacity 0.8s ease-in-out;
-    
+
 }
 
 .heading .first {
@@ -142,15 +233,15 @@ body::-webkit-scrollbar {
     font-weight: 500;
 }
 
-.heading .first {
+/* .heading .first {
     animation-delay: 1s;
 }
 
 .heading h1 {
     animation-delay: 2.2s;
-}
+} */
 
-.heading h1 span {
+/* .heading h1 span {
     position: absolute;
     top: 0;
     left: 0;
@@ -158,9 +249,9 @@ body::-webkit-scrollbar {
     width: 0;
     background-color: red;
     animation: text 1s .5s ease-in-out;
-}
+} */
 
-.heading .first span {
+/* .heading .first span {
     animation-delay: .5s;
     animation-duration: 1s;
 }
@@ -169,7 +260,7 @@ body::-webkit-scrollbar {
     animation-delay: 1.5s;
     animation-duration: 1.5s;
 
-}
+} */
 
 .heading.fade-in {
     opacity: 1;
@@ -220,9 +311,17 @@ body::-webkit-scrollbar {
         position: relative;
     }
 
+    .gr3 {
+        left: 0px;
+        bottom: 50px;
+        z-index: 5;
+        height: 10px;
+        width: 30px;
+    }
+
     .cv-dw-box {
         position: absolute;
-        top: 70%;
+        top: 65%;
         left: 50%;
         transform: translateX(-50%);
         height: 60px;
@@ -233,7 +332,7 @@ body::-webkit-scrollbar {
         width: 90%;
         height: auto;
         position: absolute;
-        top: 45%;
+        top: 40%;
         left: 0;
         transform: translate(0, -50%);
         padding-left: 30px;
@@ -242,23 +341,25 @@ body::-webkit-scrollbar {
 
     .heading h1 {
         position: relative;
-        color: transparent;
+        color: black;
         font-size: 90px;
         font-weight: 600;
-        display: inline-block;
+        /* display: inline-block; */
         letter-spacing: 2px;
-        animation: overlay .5s 1s ease forwards;
-        line-height: 110px;
+        line-height: 100px;
+        text-align: center;
+
     }
 
 
     .heading .first {
         font-size: 45px;
         font-weight: 500;
-
+        text-align: left;
+        width: 100%;
     }
 
-    .heading .first {
+    /* .heading .first {
         animation-delay: 1s;
     }
 
@@ -279,9 +380,9 @@ body::-webkit-scrollbar {
     .heading .first span {
         animation-delay: .5s;
         animation-duration: 1s;
-    }
+    } */
 
-    .heading h1 span {
+    /* .heading h1 span {
         animation-delay: 1.5s;
         animation-duration: 1.5s;
 
@@ -303,7 +404,7 @@ body::-webkit-scrollbar {
         100% {
             color: white;
         }
-    }
+    } */
 
 }
 
@@ -550,7 +651,7 @@ body::-webkit-scrollbar {
     .project-cont {
         overflow-x: scroll;
         width: 100%;
-        gap:50px;
+        gap: 50px;
     }
 
     .projects-box {
@@ -572,19 +673,23 @@ body::-webkit-scrollbar {
         flex-shrink: 0;
         border-radius: 20px;
     }
-    .pr-inner-head h3{
+
+    .pr-inner-head h3 {
         font-size: 18px;
         padding-top: 5px;
     }
+
     .pr-desc {
         width: 320px;
         height: 250px;
         padding: 5px 20px;
         font-size: 12px;
     }
-    .projects .pr-right-sec{
+
+    .projects .pr-right-sec {
         justify-content: space-evenly;
     }
+
     .pr-right-sec:hover .pr-desc {
         overflow: visible;
         width: 320px;
@@ -656,7 +761,7 @@ body::-webkit-scrollbar {
     height: 100%;
     border-radius: 30px;
     box-shadow: 4px 4px 8px rgba(96, 96, 96, 0.537),
-                3px 3px 5px rgba(96, 96, 96, 0.537) ;
+        3px 3px 5px rgba(96, 96, 96, 0.537);
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -772,43 +877,50 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:180px;
+    gap: 180px;
     padding: 0 120px;
     box-sizing: border-box;
     height: 480px;
-    
+
 }
-.c-f-h-box{
+
+.c-f-h-box {
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.8s ease-in-out,
-                transform 0.8s ease-in-out ;
+        transform 0.8s ease-in-out;
 }
+
 .c-f-h-box h1 {
     font-size: 60px;
     font-weight: 600;
 }
-.cfh-fade{
+
+.cfh-fade {
     transform: translateY(0);
     opacity: 1;
 }
-.arrow-icon{
+
+.arrow-icon {
     padding-top: 20px;
     width: 50px;
-    height:50px;
+    height: 50px;
     margin: 0 auto;
     transition: 0.6s ease;
 }
-.arrow-icon > svg{
+
+.arrow-icon>svg {
     width: 50px;
-    height:50px;
+    height: 50px;
     cursor: pointer;
     transition: 0.4s ease;
     -webkit-tap-highlight-color: transparent;
 }
-.arrow-icon>svg:active{
+
+.arrow-icon>svg:active {
     transform: scale(0.8);
 }
+
 .contact-form {
     width: auto;
     height: auto;
@@ -828,15 +940,17 @@ body::-webkit-scrollbar {
     visibility: hidden;
     opacity: 0;
     transition: visibility 1s ease,
-                opacity 1s ease,
-                transform 1s ease;
+        opacity 1s ease,
+        transform 1s ease;
 }
-.msgvisible{
+
+.msgvisible {
     /* display: block; */
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
 }
+
 .input-fields {
     height: 40px;
     width: 280px;
@@ -992,45 +1106,55 @@ body::-webkit-scrollbar {
 .submit-btn button:active {
     transform: scale(0.9);
 }
+
 @media (max-width:700px) {
-        .contact-f-h-box{
-            flex-direction: column;
-            gap:0;
-            height: 100%;
-            padding: 0;
-            padding-top: 40px;
-        }
-        .c-f-h-box h1{
-            font-size: 35px;
-        }
-        .arrow-icon{
-            width: 40px;
-            height: 40px;
-        }
-        .arrow-icon > svg{
-            width: 40px;
-            height: 40px;
-        }
-        .contact-form{
-            align-items: center;
-            justify-content: center;
-            margin-top: 50px;
-        }
-        .input-fields{
-            width: 300px;
-            margin-right: 0;
-            margin-left: 0;
-        }
-        .input-fields input{
-           width: 300px;
-        }
-        .contact-form .textarea{
-            width: 300px;
-        }
-        .submit-btn{
-            margin-left: 0;
-        }
-        .submit-btn button{
-            width: 300px;
-        }
+    .contact-f-h-box {
+        flex-direction: column;
+        gap: 0;
+        height: 100%;
+        padding: 0;
+        padding-top: 40px;
+    }
+
+    .c-f-h-box h1 {
+        font-size: 35px;
+    }
+
+    .arrow-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .arrow-icon>svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-form {
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .input-fields {
+        width: 300px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .input-fields input {
+        width: 300px;
+    }
+
+    .contact-form .textarea {
+        width: 300px;
+    }
+
+    .submit-btn {
+        margin-left: 0;
+    }
+
+    .submit-btn button {
+        width: 300px;
+    }
 }

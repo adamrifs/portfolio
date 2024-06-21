@@ -10,8 +10,20 @@ function Nav() {
 
             if (window.scrollY > 700) {
                 navref.current.style.backgroundColor = 'black'
+                const liElements = navref.current.querySelectorAll('li a')
+                liElements.forEach(li => {
+                    li.style.color = 'white'
+                })
+                const logo = navref.current.querySelector('.textbox h1')
+                logo.style.color = 'white'
             } else {
                 navref.current.style.backgroundColor = 'transparent'
+                const liElements = navref.current.querySelectorAll('li a')
+                liElements.forEach(li => {
+                    li.style.color = 'black'
+                })
+                 const logo = navref.current.querySelector('.textbox h1')
+                logo.style.color = 'black'
             }
         }
         window.addEventListener('scroll', navfun)
@@ -32,21 +44,21 @@ function Nav() {
             }
         }
 
-        function closefun(){
-            if(navcloseref.current){
+        function closefun() {
+            if (navcloseref.current) {
                 setisopen(false)
-            }else{
+            } else {
                 setisopen(true)
             }
         }
         naviconref.current.addEventListener('touchstart', navmenu)
-        navcloseref.current.addEventListener('touchstart',closefun)
+        navcloseref.current.addEventListener('touchstart', closefun)
         return () => {
 
             naviconref.current.removeEventListener('touchstart', navmenu)
         }
     }, [])
-             
+
     return (
         <div>
             <nav id="nav" ref={navref} className='nav'>

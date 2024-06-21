@@ -12,6 +12,8 @@
 }
 .textbox h1{
     cursor: pointer;
+    color: black;
+    transition: 0.8s ease-in-out;
 }
 .nav-links ul{
     position:absolute;
@@ -27,14 +29,15 @@
 }
 .nav-links ul li a{
     text-decoration:none;
-    color:white;
+    color:black;
     font-size:15px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 2px;
+    transition:0.8s ease-in-out;
 }
 .nav-links ul li a::after{
     content:'';
-    background-color: red;
+    background: linear-gradient(to right,#0a75c5 40%, #69e9d2  100%);
     height:2px;
     width:0;
     display:block;
@@ -81,7 +84,7 @@ nav h1 span{
     .nav-links{
         width:250px;
         height:390px;
-        background-color:rgba(0, 0, 0, 0.837);
+        background-color:rgba(0, 0, 0, 0.567);
         position:fixed;
         top:-500px;
         right:0px;
@@ -106,6 +109,7 @@ nav h1 span{
     }
     .nav-links li:active{
         background-color: rgb(255, 255, 255);
+        color:black;
     }
     .nav-links li:active a{
         color: black;
@@ -148,7 +152,7 @@ nav h1 span{
   
     .navicon{
         display: block;
-        color: rgba(255, 255, 255, 0.852);
+        color: rgba(74, 72, 72, 0.852);
         width: 40px;
         height: 40px;
         position: absolute;

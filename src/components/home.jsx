@@ -93,9 +93,9 @@ function Home() {
             const projtop = projectref.current.getBoundingClientRect().top
             const windowheight = window.innerHeight
             if (projectref) {
-                if (projtop < windowheight ) {
+                if (projtop < windowheight) {
                     setprojvisible(true)
-                    window.removeEventListener('scroll',projslide);
+                    window.removeEventListener('scroll', projslide);
                 }
             }
         }
@@ -196,6 +196,15 @@ function Home() {
     return (
         <div className='home-container'>
             <div className='main'>
+                
+                <div class="gr1"></div>
+                <div class="gr2"></div>
+                <div class="gr3"></div>
+                <div class="gr4"></div>
+                <div class="gr5"></div>
+                <div class="gr6"></div>
+                <div class="gr7"></div>
+
                 <div class="container">
                     <div ref={mainref} class="heading fade-in">
                         <h1 class="first">Hi,<span></span></h1><br />
