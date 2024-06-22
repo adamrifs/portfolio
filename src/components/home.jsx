@@ -198,40 +198,34 @@ function Home() {
         <div className='home-container'>
             <div className='main'>
 
-                <div class="gr1"></div>
-                <div class="gr2"></div>
-                <div class="grf"></div>
-                <div class="gr3"></div>
-                <div class="gr4"></div>
-                <div class="gr4f"></div>
-                <div class="gr5"></div>
-                <div class="gr5f"></div>
-                <div class="gr6"></div>
-                <div class="gr7"></div>
+                <div className="gr1"></div>
+                <div className="gr2"></div>
+                <div className="grf"></div>
+                <div className="gr3"></div>
+                <div className="gr4"></div>
+                <div className="gr4f"></div>
+                <div className="gr5"></div>
+                <div className="gr5f"></div>
+                <div className="gr6"></div>
+                <div className="gr7"></div>
 
-                <div class="container">
-                    <div ref={mainref} class="heading fade-in">
-                        {/* <h1 class="first">Hi,<span></span></h1><br />
-                        <h1>I'm Adam <span></span></h1> */}
-
+                <div className="container">
+                    <div className="heading">
                         <h1>
                             <span class="word1">Hi</span>
                             <span class="word2">I'm</span>
                             <span class="word3">Adam</span>
-                            {/* <span class="word4">Future</span> */}
                         </h1>
-                        <div class="box">
+                        <div ref={mainref} className="box fade-in">
                             <h1>
                                 <span class="box1">Hi,</span>
                                 <span class="box2">I'm</span>
                                 <span class="box3">Adam</span>
-                                {/* <span class="box4">Future</span> */}
                             </h1>
                         </div>
-
                     </div>
-                </div>
-                <div className="cv-dw-box">
+
+                    <div className="cv-dw-box">
                     <a href={cv} download='adamsCV'>
                         <button onClick={btnload}>
                             <span></span><TiDownload className={buttonanim ? 'icon download' : 'icon'} /> Download CV
@@ -239,9 +233,14 @@ function Home() {
                     </a>
 
                     <div className="gt-start">
+                        <a href="#aboutsec">
                         <button className='gtstrt'>Get Started  <BsArrowRightShort /></button>
+                        </a>
                     </div>
                 </div>
+
+                </div>
+              
             </div>
 
             {/* =============second container starts here========= */}

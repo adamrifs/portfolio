@@ -26,10 +26,6 @@ body::-webkit-scrollbar {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    /* background-image: linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.7)), url('../components/assets/laptop6.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; */
     background: linear-gradient(180deg, rgb(255, 255, 255) 50%, rgba(100, 208, 203, 1) 100%);
     background-attachment: fixed;
     position: relative;
@@ -58,7 +54,7 @@ body::-webkit-scrollbar {
     position: absolute;
     bottom: -120px;
     left: 300px;
-    z-index: 5;
+    /* z-index: 5; */
     animation: gra2 14s ease infinite;
 }
 
@@ -241,11 +237,11 @@ body::-webkit-scrollbar {
 
 /* ========================================================================== */
 .cv-dw-box {
-    position: absolute;
+    /* position: absolute;
     top: 58%;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
+    transform: translateX(-50%); */
+    z-index: 200;
     display: flex;
     gap: 20px;
     opacity: 0;
@@ -279,17 +275,6 @@ body::-webkit-scrollbar {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* .cv-dw-box button::before {
-    content: '';
-    width: 0;
-    height: 100%;
-    background: linear-gradient(to left, #879bfd, #3d66a6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s ease;
-    z-index: -1;
-} */
 
 .cv-dw-box button>.icon {
     width: 20px;
@@ -357,17 +342,19 @@ body::-webkit-scrollbar {
 
 /* main heading*/
 .container {
-    height: 50%;
+    height: 40%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    gap: 0px;
     position: absolute;
-    top: 30%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Poppins";
-    z-index: 100;
+    /* z-index: 100; */
 }
 
 .container h1 {
@@ -376,11 +363,11 @@ body::-webkit-scrollbar {
 }
 
 .box {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     width: 700px;
-
+    transition: opacity 0.6s ease;
 }
 
 .box h1 {
@@ -428,13 +415,6 @@ body::-webkit-scrollbar {
     animation: word3 0.7s 1.8s linear forwards;
 }
 
-/* .word4{
-    visibility: hidden;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: word4 0.3s 2s linear forwards;
-} */
 @keyframes word1 {
     0% {
         visibility: hidden;
@@ -484,23 +464,6 @@ body::-webkit-scrollbar {
     }
 }
 
-/* @keyframes word4 {
-    0%{
-        visibility: hidden;
-        transform: translateX(-50%);
-    }   
-    50%{
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(-50%);
-    }
-
-    100%{
-        visibility: visible;
-        opacity:0;
-        transform: translateX(-150%);
-    }
-} */
 /* ======== second animation=========== */
 @keyframes second {
     0% {
@@ -515,64 +478,12 @@ body::-webkit-scrollbar {
     }
 }
 
-/* .heading h1 {
-    position: relative;
-    color: black;
-    font-size: 120px;
-    font-weight: 700;
-    display: inline-block;
-    animation: overlay .5s 1s ease forwards;
-}
-
-.heading {
-    text-align: left;
-    transition: transform 0.8s ease-in-out,
-        opacity 0.8s ease-in-out;
-
-}
-
-.heading .first {
-    font-size: 65px;
-    font-weight: 500;
-} */
-
-/* .heading .first {
-    animation-delay: 1s;
-}
-
-.heading h1 {
-    animation-delay: 2.2s;
-} */
-
-/* .heading h1 span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background-color: red;
-    animation: text 1s .5s ease-in-out;
-} */
-
-/* .heading .first span {
-    animation-delay: .5s;
-    animation-duration: 1s;
-}
-
-.heading h1 span {
-    animation-delay: 1.5s;
-    animation-duration: 1.5s;
-
-} */
-
-.heading.fade-in {
+.box.fade-in {
     opacity: 1;
-    transform: translateX(0);
 }
 
-.heading.fade-out {
+.box.fade-out {
     opacity: 0;
-    transform: translateX(-100%);
 }
 
 @keyframes text {
@@ -623,91 +534,73 @@ body::-webkit-scrollbar {
     }
 
     .cv-dw-box {
-        position: absolute;
-        top: 65%;
-        left: 50%;
-        transform: translateX(-50%);
         height: 60px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
+    .cv-dw-box .gt-start .gtstrt>svg{
+        transform: rotate(90deg);
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+
+    /* ======== get started button align vertical ========= */
+
+    /* .cv-dw-box .gt-start .gtstrt {
+        height: 130px;
+        width: 55px;
+        font-size: 0;
+    }
+    .cv-dw-box .gt-start .gtstrt>svg{
+        transform: rotate(90deg);
+        width: 50px;
+        height: 50px;
+    } */
 
     .container {
-        width: 90%;
-        height: auto;
+        width: 100%;
+        height: 80%;
         position: absolute;
-        top: 40%;
+        top: 45%;
         left: 0;
         transform: translate(0, -50%);
-        padding-left: 30px;
+        gap: 60px;
+        align-items: center;
+        justify-content: center;
+        /* padding-left: 30px; */
         box-sizing: border-box;
+        z-index: 100;
     }
 
-    .heading h1 {
-        position: relative;
-        color: black;
-        font-size: 90px;
-        font-weight: 600;
-        /* display: inline-block; */
-        letter-spacing: 2px;
-        line-height: 100px;
-        text-align: center;
-
+    .container .heading>h1 {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 100px;
     }
-
-
-    .heading .first {
-        font-size: 45px;
-        font-weight: 500;
-        text-align: left;
+    .container .heading{
         width: 100%;
     }
 
-    /* .heading .first {
-        animation-delay: 1s;
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
     }
 
-    .heading h1 {
-        animation-delay: 2.2s;
+    .box>h1 {
+        display: flex;
+        flex-direction: column;
+        font-size: 90px;
+        margin-left: 10%;
     }
-
-    .heading h1 span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0;
-        background-color: red;
-        animation: text 1s .5s ease-in-out;
+    .box1,.box2,.box3{
+        margin:0;
+        height: 100px;
     }
-
-    .heading .first span {
-        animation-delay: .5s;
-        animation-duration: 1s;
-    } */
-
-    /* .heading h1 span {
-        animation-delay: 1.5s;
-        animation-duration: 1.5s;
-
-    }
-
-    @keyframes text {
-        50% {
-            width: 100%;
-            left: 0;
-        }
-
-        100% {
-            width: 0;
-            left: 100%;
-        }
-    }
-
-    @keyframes overlay {
-        100% {
-            color: white;
-        }
-    } */
 
 }
 
