@@ -444,12 +444,10 @@ body::-webkit-scrollbar {
 @keyframes word1 {
     0% {
         visibility: hidden;
-        /* transform: translateX(-50%); */
     }
 
     50% {
         visibility: visible;
-        /* transform: translateX(-50%); */
     }
 
     100% {
@@ -461,12 +459,10 @@ body::-webkit-scrollbar {
 @keyframes word2 {
     0% {
         visibility: hidden;
-        /* transform: translateX(-50%); */
     }
 
     50% {
         visibility: visible;
-        /* transform: translateX(-50%); */
     }
 
     100% {
@@ -477,12 +473,10 @@ body::-webkit-scrollbar {
 @keyframes word3 {
     0% {
         visibility: hidden;
-        /* transform: translateX(-50%); */
     }
 
     50% {
         visibility: visible;
-        /* transform: translateX(-50%); */
     }
 
     100% {
