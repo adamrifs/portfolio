@@ -313,11 +313,37 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     vertical-align: middle;
+    transform: rotate(90deg);
+    animation: gtstrtanim 2s  linear infinite;
 }
 
 .gt-start .gtstrt:hover {
     background-color: black;
     color: white;
+}
+.gt-start .gtstrt:hover>svg{
+    animation: none;
+    transition:0.5s ease;
+}
+@keyframes gtstrtanim {
+    0% {
+        transform: translateY(0) rotate(90deg);
+    }
+
+    50% {
+        transform: translateY(200%) rotate(90deg);
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateY(-100%) rotate(90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) rotate(90deg);
+        opacity: 1;
+    }
 }
 
 @keyframes movedown {
@@ -538,6 +564,10 @@ body::-webkit-scrollbar {
         width: 100%;
         display: flex;
         flex-direction: column;
+    }
+    .cv-dw-box .gt-start .gtstrt:active{
+        background-color: black;
+        color: white;
     }
     .cv-dw-box .gt-start .gtstrt>svg{
         transform: rotate(90deg);
