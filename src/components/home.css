@@ -587,7 +587,10 @@ body::-webkit-scrollbar {
     .main {
         position: relative;
     }
-
+    .gr2{
+        height: 50px;
+        width: 50px;
+    }
     .gr3 {
         left: 0px;
         bottom: 50px;
