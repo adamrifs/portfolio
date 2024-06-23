@@ -148,8 +148,7 @@ function Home() {
             if (mesheadref.current) {
                 if (mesheadtop < windowheight / 2) {
                     setmesheadvisible(true)
-                } else {
-                    setmesheadvisible(false)
+                    window.removeEventListener('scroll',mesheadfun)
                 }
             }
         }
@@ -202,6 +201,7 @@ function Home() {
                 <div className="gr2"></div>
                 <div className="grf"></div>
                 <div className="gr3"></div>
+                <div className="gr3f"></div>
                 <div className="gr4"></div>
                 <div className="gr4f"></div>
                 <div className="gr5"></div>

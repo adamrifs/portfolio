@@ -49,16 +49,16 @@ body::-webkit-scrollbar {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    box-shadow: 0 0 100px 110px #d0d6f3;
-    background-color: #d0d6f3;
+    box-shadow: 0 0 100px 110px #0a75c5;
+    background-color: #0a75c5;
     position: absolute;
     bottom: -120px;
     left: 300px;
-    /* z-index: 5; */
+    z-index: 5;
     animation: gra2 14s ease infinite;
 }
 
-.grf {
+/* .grf {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -68,9 +68,21 @@ body::-webkit-scrollbar {
     bottom: -120px;
     left: 300px;
     z-index: 5;
-}
+} */
 
 .gr3 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 110px #83b0f9;
+    background-color: #83b0f9;
+    position: absolute;
+    bottom: -100px;
+    left: 700px;
+    z-index: 1;
+    animation: gra3 14s ease infinite;
+}
+.gr3f{
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -81,7 +93,6 @@ body::-webkit-scrollbar {
     left: 700px;
     z-index: 1;
 }
-
 .gr4 {
     width: 20px;
     height: 20px;
@@ -91,10 +102,11 @@ body::-webkit-scrollbar {
     position: absolute;
     bottom: 0px;
     right: 300px;
+    z-index: 1;
     animation: gra4 15s ease infinite;
 }
 
-.gr4f {
+/* .gr4f {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -103,7 +115,7 @@ body::-webkit-scrollbar {
     position: absolute;
     bottom: 0px;
     right: 300px;
-}
+} */
 
 .gr5 {
     width: 100px;
@@ -154,28 +166,56 @@ body::-webkit-scrollbar {
 
 @keyframes gra2 {
     0% {
-        top: 50%;
-        left: 0px;
+        bottom: -120px;
+        left: 300px;
     }
 
     25% {
-        top: 10%;
-        left: 20%;
+        bottom: 30%;
+        left: 0%;
     }
 
     50% {
-        top: 70%;
-        left: 50%;
+        bottom: 100%;
+        left: 30%;
     }
 
     75% {
-        top: 30%;
+        bottom: 50%;
         left: 70%;
     }
 
     100% {
-        top: 50%;
-        left: 0px;
+        bottom: -120px;
+        left: 300px;
+    }
+}
+
+/* ================= gr3 animation=========================== */
+@keyframes gra3 {
+    0%{
+        bottom: -100px;
+        left: 700px;
+    }
+    20%{
+        bottom: 100%;
+        right: 20%;
+    }
+    40%{
+        bottom: 40%;
+        left:30%;
+    }
+    60%{
+        bottom: 90%;
+        left: 0%;
+    }
+    80%{
+        bottom: 100%;
+        right: 50%;
+    }
+    100%{
+        bottom: -100px;
+        left: 700px;
     }
 }
 
@@ -187,18 +227,18 @@ body::-webkit-scrollbar {
     }
 
     25% {
-        bottom: 100%;
-        right: 20%;
-    }
-
-    50% {
-        bottom: 70%;
+        bottom: 40%;
         right: 50%;
     }
 
+    50% {
+        bottom: 100%;
+        right: 40%;
+    }
+
     75% {
-        bottom: 90%;
-        right: 80%;
+        bottom: 10%;
+        right: 100%;
     }
 
     100% {
@@ -313,35 +353,36 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     vertical-align: middle;
-    transform: rotate(90deg);
-    animation: gtstrtanim 2s  linear infinite;
+    animation: gtstrtanim 2s linear infinite;
 }
 
 .gt-start .gtstrt:hover {
     background-color: black;
     color: white;
 }
-.gt-start .gtstrt:hover>svg{
+
+.gt-start .gtstrt:hover>svg {
     animation: none;
-    transition:0.5s ease;
+    transition: 0.5s ease;
 }
+
 @keyframes gtstrtanim {
     0% {
-        transform: translateY(0) rotate(90deg);
+        transform: translateX(0);
     }
 
     50% {
-        transform: translateY(200%) rotate(90deg);
+        transform: translateX(200%);
         opacity: 0;
     }
 
     75% {
-        transform: translateY(-100%) rotate(90deg);
+        transform: translateX(-100%);
         opacity: 0;
     }
 
     100% {
-        transform: translateY(0) rotate(90deg);
+        transform: translateX(0);
         opacity: 1;
     }
 }
@@ -380,7 +421,7 @@ body::-webkit-scrollbar {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Poppins";
-    /* z-index: 100; */
+    z-index: 100;
 }
 
 .container h1 {
@@ -394,6 +435,7 @@ body::-webkit-scrollbar {
     transform: translateX(-50%); */
     width: 700px;
     transition: opacity 0.6s ease;
+    z-index: 510;
 }
 
 .box h1 {
@@ -401,6 +443,7 @@ body::-webkit-scrollbar {
     font-weight: 700;
     margin-top: 0;
     opacity: 0;
+    z-index: 500;
     animation: second 1.5s 2.5s ease forwards;
 }
 
@@ -559,11 +602,13 @@ body::-webkit-scrollbar {
         display: flex;
         flex-direction: column;
     }
-    .cv-dw-box .gt-start .gtstrt:active{
+
+    .cv-dw-box .gt-start .gtstrt:active {
         background-color: black;
         color: white;
     }
-    .cv-dw-box .gt-start .gtstrt>svg{
+
+    .cv-dw-box .gt-start .gtstrt>svg {
         transform: rotate(90deg);
         margin-left: 5px;
         margin-bottom: 5px;
@@ -604,11 +649,12 @@ body::-webkit-scrollbar {
         transform: translateX(-50%);
         font-size: 100px;
     }
-    .container .heading{
+
+    .container .heading {
         width: 100%;
     }
 
-    .box{
+    .box {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -621,8 +667,11 @@ body::-webkit-scrollbar {
         font-size: 90px;
         margin-left: 10%;
     }
-    .box1,.box2,.box3{
-        margin:0;
+
+    .box1,
+    .box2,
+    .box3 {
+        margin: 0;
         height: 100px;
     }
 
@@ -1304,10 +1353,8 @@ body::-webkit-scrollbar {
     content: '';
     width: 0;
     height: 100%;
-    /* background-color: #D21312; */
-    background: linear-gradient(to left, #879bfd, #3d66a6);
-    /* background: linear-gradient(to left, #bf0603, #7a0402); */
-    /* background: linear-gradient(to right, rgba(108, 108, 108, 0.6), rgba(0, 0, 0, 0.119)); */
+    background-color: #879bfd;
+    /* background: linear-gradient(to left, #879bfd, #3d66a6); */
     position: absolute;
     top: 0;
     left: 0;
