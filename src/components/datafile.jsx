@@ -4,7 +4,7 @@ import web4 from './assets/web4.gif'
 import web1 from './assets/web1.gif'
 import web2 from './assets/web2.gif'
 import LuxeRooms from './assets/LuxeRooms.png'
-
+import adventure from './assets/adventure.png'
 export const projects = [
     {
         id:'1',
@@ -22,11 +22,19 @@ export const projects = [
     },
     {
         id:'3',
+        image:adventure,
+        link:'https://adventuretemplate.vercel.app',
+        name:'Adventure',
+        description:'Explore your adventures with our <b>React.js</b> adventure portfolio website template. Crafted for explorers, this template encapsulates the essence of adventurous spirits, offering a dynamic showcase of your journeys. With all essential elements included, from stunning visuals to interactive maps and captivating narratives, its your perfect digital companion for sharing and reliving your thrilling experiences. Ready to inspire and engage fellow adventurers, this template is designed to elevate your portfolio to new heights.'
+    },
+    {
+        id:'4',
         image: LuxeRooms,
         link:'https://luxe-rooms.vercel.app',
         name:'LuxeRooms',
         description:'LuxeRooms is an elegant interior furniture website template built with <b>React</b> , offering a curated collection of premium furniture to transform your living spaces.'
     }
+
 ]
 
 export const aboutdet = [

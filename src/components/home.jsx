@@ -1,11 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import './home.css'
-import fornax from './assets/fornax.jpg'
-import university from './assets/university.jpg'
-import web1 from './assets/web1.gif'
-import web2 from './assets/web2.gif'
-import web3 from './assets/web3.gif'
-import web4 from './assets/web4.gif'
 import cv from './assets/cv.pdf'
 import { GiClick } from "react-icons/gi";
 import { TiDownload } from "react-icons/ti";
@@ -80,7 +74,7 @@ function Home() {
         }
 
         window.addEventListener('scroll', headscroll)
-        return () => {
+        return () => {  
             window.removeEventListener('scroll', headscroll)
         }
     }, [])
