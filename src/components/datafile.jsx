@@ -5,6 +5,7 @@ import web1 from './assets/web1.gif'
 import web2 from './assets/web2.gif'
 import LuxeRooms from './assets/LuxeRooms.png'
 import adventure from './assets/adventure.png'
+import UrbanAbodes from './assets/urbanabodes.png'
 export const projects = [
     {
         id:'1',
@@ -32,7 +33,14 @@ export const projects = [
         image: LuxeRooms,
         link:'https://luxe-rooms.vercel.app',
         name:'LuxeRooms',
-        description:'LuxeRooms is an elegant interior furniture website template built with <b>React</b> , offering a curated collection of premium furniture to transform your living spaces.'
+        description:'LuxeRooms is an elegant interior furniture website template built with <b>React.js</b> , offering a curated collection of premium furniture to transform your living spaces.'
+    },
+    {
+        id:'5',
+        image: UrbanAbodes,
+        link:'urbanabodes-realestate.vercel.app',
+        name:'UrbanAbodes',
+        description:'UrbanAbodes is a dynamic real estate website developed using <b>React.js</b> , designed to simplify the process of discovering and purchasing properties. Users can effortlessly browse and search for new properties, view detailed listings with high-quality images, and filter results based on their preferences. The site offers a user-friendly interface, ensuring a seamless experience for both buyers and sellers, making it a comprehensive tool for anyone looking to invest in real estate.'
     }
 
 ]
