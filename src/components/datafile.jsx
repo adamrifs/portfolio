@@ -31,7 +31,7 @@ export const projects = [
     {
         id:'4',
         image: UrbanAbodes,
-        link:'urbanabodes-realestate.vercel.app',
+        link:'https://urbanabodes-realestate.vercel.app',
         name:'UrbanAbodes',
         description:'UrbanAbodes is a dynamic real estate website developed using <b>React.js</b> , designed to simplify the process of discovering and purchasing properties. Users can effortlessly browse and search for new properties, view detailed listings with high-quality images, and filter results based on their preferences. The site offers a user-friendly interface, ensuring a seamless experience for both buyers and sellers, making it a comprehensive tool for anyone looking to invest in real estate.'
     },
