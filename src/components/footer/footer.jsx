@@ -27,10 +27,10 @@ function Footer() {
                             Get in touch.
                         </div>
                         <div class="icons">
-                            <a href="1"><FaFacebook /></a>
-                            <a href="2"><FaLinkedin /></a>
-                            <a href="3"><IoLogoInstagram /></a>
-                            <a href="4"><FaXTwitter /></a>
+                            <a href="#"><FaFacebook /></a>
+                            <a href="https://linkedin.com/in/adam-rifsal-a88ab1243" target='_blank'><FaLinkedin /></a>
+                            <a href="https://www.instagram.com/_adam.rifs_/" target='_blank'><IoLogoInstagram /></a>
+                            <a href="#"><FaXTwitter /></a>
                         </div>
                         <div className="email-head">
                            <p onClick={()=> gotomail(emailaddress)}>{emailaddress}</p> 
