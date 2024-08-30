@@ -587,7 +587,6 @@ body::-webkit-scrollbar {
     .main {
         position: relative;
     }
-   
     .gr2{
         /* height: 50px;
         width: 50px; */
@@ -599,11 +598,11 @@ body::-webkit-scrollbar {
         z-index: 5;
         height: 30px;
         width: 30px;
-        /* animation:none; */
+        animation:none;
     }
     
     .gr4{
-        /* animation:none; */
+        animation:none;
     }
     .gr5{
         animation:none;
