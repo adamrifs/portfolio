@@ -6,6 +6,7 @@ import web2 from './assets/web2.gif'
 import LuxeRooms from './assets/LuxeRooms.png'
 import adventure from './assets/adventure.png'
 import UrbanAbodes from './assets/urbanabodes.png'
+import Humanica from './assets/Humanica.png'
 export const projects = [
     {
         id:'1',
@@ -41,6 +42,13 @@ export const projects = [
         link:'https://luxe-rooms.vercel.app',
         name:'LuxeRooms',
         description:'LuxeRooms is an elegant interior furniture website template built with <b>React.js</b> , offering a curated collection of premium furniture to transform your living spaces.'
+    },
+    {
+        id:'6',
+        image: Humanica,
+        link:'https://humanica.vercel.app',
+        name:'Humanica',
+        description:'Humanica an Employee Management Admin Panel I developed this website as a <b>Freelancer for my client from the Netherlands. Build using MERN stack</b>, Humanica is an employee management system that allows admins to control working hours, breaks, and vacation statuses. It features a fully functional calendar for monitoring specific dates and tracks the last 10 login IP addresses and locations, helping to identify which admins are logged in from specific locations. The system also supports registering multiple admins as needed.'
     },
 
 ]
